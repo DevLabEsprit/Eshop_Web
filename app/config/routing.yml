@@ -1,0 +1,18 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+eshop_stock:
+    resource: "@EshopStockBundle/Resources/config/routing.yml"
+    prefix:   /
+panier_prod:
+    resource: "@EshopStockBundle/Resources/config/routing_panier.yml"
+    prefix:   /
+myapp_user:
+    resource: "@MyappUserBundle/Resources/config/routing.yml"
+    prefix:   /
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+
+
+

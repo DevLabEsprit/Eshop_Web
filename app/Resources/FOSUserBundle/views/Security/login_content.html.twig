@@ -1,0 +1,44 @@
+{% extends "::base.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block body %}
+    {# Error login form #}
+
+    {% block fos_user_content %}
+
+    <div class="login-page">
+        <div class="container">
+            <h3 class="w3ls-title w3ls-title1">Login to your account</h3>
+                <div class="login-body">
+                <form action="{{ path("fos_user_security_check") }}" method="post">
+                    {% if csrf_token %}
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                    {% endif %}
+
+                    <label for="username">{{ 'security.login.username'|trans }}</label>
+                    <input type="text" id="username" name="_username" value="{{ last_username }}" class="user" required="required" />
+
+                    <label for="password">{{ 'security.login.password'|trans }}</label>
+                    <input type="password" id="password" name="_password"  class="lock" required="required" />
+
+                    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+
+                    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+                </form>
+                </div>
+
+            <h6> Not a Member? <a href="{{('register')}}">Sign Up Now »</a> </h6>
+            <div class="login-page-bottom social-icons">
+                <h5>Recover your social account</h5>
+                <ul>
+                    <li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
+                    <li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
+                    <li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
+                    <li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
+                    <li><a href="#" class="fa fa-rss icon rss"> </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock fos_user_content %}
+{% endblock %}

@@ -1,0 +1,80 @@
+eshop_stock_homepage:
+    path:     /
+    defaults: { _controller: EshopStockBundle:Default:index }
+
+eshop_stock_list:
+    path:     /list
+    defaults: { _controller: EshopStockBundle:Categorie:list }
+
+eshop_stock_liststok:
+    path:     /liststok
+    defaults: { _controller: EshopStockBundle:Stock:liststok }
+
+eshop_stock_delete:
+    path:     /delete/{id}
+    defaults: { _controller: EshopStockBundle:Categorie:delete }
+
+eshop_stock_ajout:
+    path:     /ajout
+    defaults: { _controller: EshopStockBundle:Categorie:ajout }
+
+eshop_stock_update:
+    path:     /update/{id}
+    defaults: { _controller: EshopStockBundle:Categorie:update }
+
+eshop_stock_listf:
+    path:     /listf
+    defaults: { _controller: EshopStockBundle:Categorie:listf }
+
+eshop_stock_deletestok:
+    path:     /deletestok/{id}
+    defaults: { _controller: EshopStockBundle:Stock:deletestok }
+
+eshop_stock_ajoutstok:
+    path:     /ajoutstok
+    defaults: { _controller: EshopStockBundle:Stock:ajoutstok }
+
+eshop_stock_updatestok:
+    path:     /updatestok/{id}
+    defaults: { _controller: EshopStockBundle:Stock:updatestok }
+
+eshop_stock_listprod:
+    path:     /listprod
+    defaults: { _controller: EshopStockBundle:Produit:listprod }
+
+eshop_stock_ajoutprod:
+    path:     /ajoutprod
+    defaults: { _controller: EshopStockBundle:Produit:ajoutprod }
+
+eshop_stock_listprodf:
+    path:     /listprodf
+    defaults: { _controller: EshopStockBundle:Produit:listprodf }
+
+single:
+    path:     /produit/{id}
+    defaults: { _controller: EshopStockBundle:Produit:presentation }
+
+Livraison:
+    path:     /livraison
+    defaults: { _controller: EshopStockBundle:Panier:livraison }
+validation:
+    path:  /validation
+    defaults: { _controller: EshopStockBundle:Panier:validation}
+validationCommande:
+    path: /api/banque/{id}
+    defaults: { _controller: EshopStockBundle:Commande:validationCommande}
+AnnulerCommande:
+    path: /Annuler/{id}
+    defaults: { _controller: EshopStockBundle:Commande:annulationCommande}
+
+factures:
+    path: /factures
+    defaults: { _controller: MyappUserBundle:Utilisateur:factures }
+
+facturesPDF:
+    path: /facturesPDF/{id}
+    defaults: { _controller: MyappUserBundle:Utilisateur:facturesPDF }
+
+livraisonAdresseSuppression:
+    path:  /livraison/adresse/suppression/{id}
+    defaults: { _controller: EshopStockBundle:Panier:adresseSuppression }

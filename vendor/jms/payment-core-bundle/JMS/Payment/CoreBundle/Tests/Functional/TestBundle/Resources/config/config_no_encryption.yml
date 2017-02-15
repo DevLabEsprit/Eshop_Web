@@ -1,0 +1,4 @@
+imports:
+    - { resource: default.yml }
+
+jms_payment_core: ~
